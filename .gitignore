@@ -11,6 +11,8 @@ node_modules
 dist
 dist-ssr
 *.local
+entertainment-web-app
+entertainment-web-app-figma
 
 # Editor directories and files
 .vscode/*

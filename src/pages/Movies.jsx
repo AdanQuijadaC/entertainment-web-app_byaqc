@@ -223,7 +223,7 @@ function Movies() {
                           style={{
                             backgroundImage: `url(${item.thumbnail.regular.large})`,
                           }}
-                          className="flex -mt-2 p-2 rounded-lg bg-cover bg-center w-full relative group min-h-[110px] h-[110px] max-h-[280px] sm:min-h-[130px] sm:h-[130px] md:min-h-[160px]"
+                          className={`flex -mt-2 p-2 rounded-lg bg-cover bg-center w-full relative group min-h-[110px] h-[110px] max-h-[280px] sm:min-h-[130px] sm:h-[130px] md:min-h-[160px] `}
                         >
                           {/* hidden play button */}
                           <div className="hidden absolute rounded-lg group-hover:flex pointer-events-none top-0 left-0 w-full h-full  justify-center items-center bg-black/40 z-20 ">

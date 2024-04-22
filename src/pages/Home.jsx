@@ -223,7 +223,7 @@ function Home() {
                           key={index}
                           style={{
                             backgroundImage: `url(${
-                              import.meta.env.VITE_DATA_JSON_PATH +
+                              "https://raw.githubusercontent.com/AdanQuijadaC/entertainment-web-app_byaqc/main" +
                               item.thumbnail.regular.large.split("..").slice(1)
                             })`,
                           }}

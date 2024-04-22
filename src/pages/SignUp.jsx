@@ -141,7 +141,7 @@ function SignUp() {
             </div>
             <div className="flex justify-center gap-2">
               <p>Don't have an account?</p>
-              <Link className="text-custom_red hover:text-custom_red/80" to={"../login"}>
+              <Link className="text-custom_red hover:text-custom_red/80" to={"/"}>
                 Login
               </Link>
             </div>

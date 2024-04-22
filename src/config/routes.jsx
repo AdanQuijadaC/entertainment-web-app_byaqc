@@ -10,22 +10,14 @@ import Home from "../pages/Home";
 import Search from "../pages/Search";
 import PageNotFound from "../pages/PageNotFound404";
 
-const isOK = true;
-
 export const route = createBrowserRouter([
-  {
-    path: "/",
-    element: <Navigate to={"login"}></Navigate>,
-    errorElement: <PageNotFound></PageNotFound>,
-  },
-
   {
     path: "/",
     element: <PublicLayout></PublicLayout>,
     errorElement: <PageNotFound></PageNotFound>,
     children: [
       {
-        path: "login",
+        index: true,
         element: <Login></Login>,
       },
       {
@@ -36,7 +28,7 @@ export const route = createBrowserRouter([
         element: <PrivateLayout></PrivateLayout>,
         children: [
           {
-            path: "/home",
+            path: "home",
             element: <Home></Home>,
           },
           {
@@ -72,63 +64,3 @@ export const route = createBrowserRouter([
     ],
   },
 ]);
-
-// export const route = createBrowserRouter([
-//   {
-//     path: "/",
-//     element: <Navigate to="login" />, // Redirige automáticamente a la página de inicio de sesión
-//   },
-//   {
-//     path: "/",
-//     element: <PublicLayout />,
-//     children: [
-//       {
-//         path: "login",
-//         element: <Login />,
-//       },
-//       {
-//         path: "signup",
-//         element: <SignUp />,
-//       },
-//     ],
-//   },
-//   {
-//     path: "/",
-//     element: <PrivateLayout />,
-//     children: [
-//       {
-//         path: "home",
-//         index: true,
-//         element: <Home />,
-//       },
-//       {
-//         path: "movies",
-//         element: <Movies />,
-//       },
-//       {
-//         path: "tvseries",
-//         element: <TvSeries />,
-//       },
-//       {
-//         path: "bookmarket",
-//         element: <Bookmarket />,
-//       },
-//       {
-//         path: "home/search",
-//         element: <Search />,
-//       },
-//       {
-//         path: "movies/search",
-//         element: <Search />,
-//       },
-//       {
-//         path: "tvseries/search",
-//         element: <Search />,
-//       },
-//       {
-//         path: "bookmarket/search",
-//         element: <Search />,
-//       },
-//     ],
-//   },
-// ]);

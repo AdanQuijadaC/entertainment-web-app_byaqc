@@ -11,7 +11,7 @@ function PrivateLayout() {
   useEffect(() => {
     const timeoutId = setTimeout(() => {
       if (loading) {
-        navigate("/login");
+        navigate("/");
       }
     }, 2000);
 
@@ -38,7 +38,7 @@ function PrivateLayout() {
   if (user) {
     return <Outlet />;
   } else {
-    return <Navigate to={"/login"}></Navigate>;
+    return <Navigate to={"/"}></Navigate>;
   }
 }
 export default PrivateLayout;

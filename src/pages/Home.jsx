@@ -166,7 +166,7 @@ function Home() {
                       <li
                         onClick={async () => {
                           setIsOpen(!isOpen);
-                          console.log("logout");
+
                           try {
                             await logout();
                           } catch (error) {}
@@ -222,7 +222,10 @@ function Home() {
                         <div
                           key={index}
                           style={{
-                            backgroundImage: `url(${item.thumbnail.trending.large})`,
+                            backgroundImage: `url(${
+                              import.meta.env.VITE_DATA_JSON_PATH +
+                              item.thumbnail.regular.large.split("..").slice(1)
+                            })`,
                           }}
                           className="flex flex-col relative group bg-center bg-cover rounded-lg w-full max-w-[240px] min-w-[240px] min-h-[140px] p-2 justify-between sm:max-w-[470px] sm:max-h-[230px] md:min-w-[470px] md:min-h-[230px]"
                         >
@@ -354,7 +357,10 @@ function Home() {
                       >
                         <div
                           style={{
-                            backgroundImage: `url(${item.thumbnail.regular.large})`,
+                            backgroundImage: `url(${
+                              import.meta.env.VITE_DATA_JSON_PATH +
+                              item.thumbnail.regular.large.split("..").slice(1)
+                            })`,
                           }}
                           className="flex -mt-2 p-2 rounded-lg bg-cover bg-center w-full relative group min-h-[110px] h-[110px] max-h-[280px] sm:min-h-[130px] sm:h-[130px] md:min-h-[160px]"
                         >
